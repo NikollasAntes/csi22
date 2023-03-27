@@ -16,7 +16,7 @@ def draw_poly(t, n, sz):
         t.forward(sz)
         t.left(360/n)
 
-# draw_poly(tess, 8, 50)
+# draw_poly(tess, 20, 50)
 
 # mantem a janela aberta ate o usuario fecha-la
 turtle.done()

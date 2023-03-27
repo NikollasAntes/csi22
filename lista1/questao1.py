@@ -8,7 +8,7 @@ screen.bgcolor("#98FB98")
 
 # cria a tartaruga
 t = turtle.Turtle()
-t.speed(4)
+t.speed(3)
 t.pensize(3)
 t.color("#FF69B4")
 
