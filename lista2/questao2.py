@@ -1,13 +1,15 @@
-# vale ressaltar que no exemplo apresentado no enunciado da questao
-# não se está calculando as médias das tuplas, mas sim a metade da soma
-# a questão foi resolvida considerando-se a média das tuplas
+# vale ressaltar que no exemplo apresentado no enunciado da questão não se
+# está calculando as médias das tuplas, mas sim a metade da soma dos elementos
+# a questão foi resolvida considerando-se a média da soma das tuplas
+# caso fosse fazer a metade da soma, basta modificar a linha 11 do código
+# por "media = soma/2"
 
-from itertools import zip_longest
-
-def media_tuplas(tuplas, valor_padrao = 0):
+def media_tuplas(tuplas):
     resultado = []
-    for grupo in zip_longest(*tuplas, fillvalue = valor_padrao):
-        soma = sum(valor for valor in grupo if valor != valor_padrao)
-        media = soma / len(grupo)
+    for tupla in tuplas:
+        soma = sum(tupla)
+        media = soma/len(tupla)
         resultado.append(media)
     return tuple(resultado)
+
+#print(media_tuplas(((2,3,4),(3,4,5,6),(2,4),(4,8,9))))
