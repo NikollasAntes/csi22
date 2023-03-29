@@ -1,8 +1,12 @@
 def reverter_lista(lista):
-    aux = lista[:]
-    aux.reverse()
-    return aux
+    i = len(lista) - 1
+    while i >= 0:
+        yield lista[i]
+        i -= 1
 
-seta = [4,5,6,7,8,9]
-print(reverter_lista(seta))
-print(seta)
+#lista = [4,7,8]
+#gen = reverter_lista(lista)
+#j = 0
+#while j < len(lista):
+#    print(next(gen))
+#    j += 1
